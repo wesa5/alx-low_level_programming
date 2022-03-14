@@ -1,8 +1,9 @@
-include <stdio.h>
-
+#include <stdio.h>
+#include <stdlib.h>
 /**
- * main - create 2 pairs of numbers that do not repeat
- * Return: 0
+ *  * main - program entry point
+ *
+ * Return: 0 always succes. Error code otherwise
  */
 int main(void)
 {
@@ -33,4 +34,5 @@ int main(void)
 	}
 	putchar('\n');
 	return (0);
+
 }
