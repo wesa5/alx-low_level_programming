@@ -18,4 +18,5 @@ _putchar (str[a]);
 }
 
 _putchar ('\n');
+
 }
