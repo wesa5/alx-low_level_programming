@@ -23,4 +23,8 @@ _putchar (s[i]);
 
 _putchar ('\n');
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> df9d57fca9b78020146caa208957443e25b1ce56
