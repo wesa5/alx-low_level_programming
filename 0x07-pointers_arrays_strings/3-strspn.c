@@ -21,4 +21,5 @@ unsigned int _strspn(char *s, char *accept)
 				if (j == a_len - 1)
 					goto exit;
 exit: return (len);
+
 }
