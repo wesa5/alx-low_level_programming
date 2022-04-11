@@ -1,45 +1,40 @@
-#include "main.h"
+# include "main.h"
+# include <stdlib.h>
 
 /**
- * str_concat - Appends a string to the end of another
- * @s1: Initial string
- * @s2: Second string
- *
- * Return: Character array
- */
+ *str_concat - concat 2 strings.
+ *@s1: first string.
+ *@s2: second string.
+ *Return: pointer to string.
+*/
 
 char *str_concat(char *s1, char *s2)
 {
-	char *new_str;
-	int y, x = 0, i = 0;
+	char *s;
+	int i = 0, j = 0, k = 0;
 
-	while (*s1)
+	if (s1 != NULL)
+		for (; s1[i]; i++)
+		;
+	if (s2 != NULL)
+		for (; s2[j]; j++)
+		;
+
+	s = malloc(sizeof(char) * (i + j + 1));
+	if (s == NULL)
+		return (NULL);
+
+	while (k < i)
 	{
-		x++;
-		s1++;
+		s[k] = s1[k];
+		k++;
 	}
 
-	while (*s2)
+	while (k < i + j)
 	{
-		i++;
-		s2++;
+		s[k] = s2[k - i];
+		k++;
 	}
-
-	for (y = 0; y < x; y++)
-	{
-		new_str[y] = s1[y];
-	}
-
-	for (; y < x + i; y++)
-	{
-		int m = 0;
-
-		new_str[y] = s2[m];
-		m++;
-	}
-
-	if (y == x + i)
-		new_str[y] = '\0';
-
-	return (new_str);
+	s[k] = '\0';
+	return (s);
 }
