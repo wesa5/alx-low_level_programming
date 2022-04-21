@@ -1,34 +1,24 @@
+#include <stdio.h>
 #include "lists.h"
 
 /**
- * print_list - function to print all elements in a list
- * @h: pointer to list
- *
- * Description: this function prints all elements in a list
- * and returns the number of nodes
- * Return: returns number of nodes
+ * print_list - prints to standard output
+ * @h: A node in list_t
+ * Return: The number of nodes
  */
 
 size_t print_list(const list_t *h)
 {
-const list_t *temp;
-int count;
+	size_t num_of_nodes = 0;
 
-temp = h;
-
-count = 0;
-while (temp != NULL)
-{
-if (temp->str == NULL)
-{
-printf("[0] (nil)\n");
-}
-else
-printf("[%lu] %s\n", (temp->len), (temp->str));
-
-temp = temp->next;
-count++;
-}
-
-return (count);
+	while (h)
+	{
+		if (h->str == NULL)
+			printf("[0] (nil)\n");
+		else
+			printf("[%u] %s\n", h->len, h->str);
+		h = h->next;
+		num_of_nodes++;
+	}
+	return (num_of_nodes);
 }
