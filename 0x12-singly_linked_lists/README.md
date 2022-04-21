@@ -1,1 +1,1 @@
-This is a singly lists directory
+This is a singly lnked lists directory
