@@ -1,20 +1,17 @@
 #include "lists.h"
 /**
- * get_dnodeint_at_index - Return the nth node
- * @head: Pointer to the head
- * @index: The node index
- * Return: The direction of the nth node
+ * free_dlistint - Free the memory
+ * @head: Pointer to head
+ * Return: Nothing
  */
-dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
+void free_dlistint(dlistint_t *head)
 {
-	unsigned int counter = 0;
+	dlistint_t *mem;
 
-	while (counter < index)
+	while (head != NULL)
 	{
-		if (head == NULL)
-			return (NULL);
-		head = head->next;
-		counter++;
+		mem = head->next;
+		free(head);
+		head = mem;
 	}
-	return (head);
 }
