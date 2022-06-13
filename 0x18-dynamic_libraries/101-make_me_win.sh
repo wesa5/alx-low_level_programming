@@ -1,3 +1,3 @@
 #!/bin/bash
-wget -P /tmp https://github.com/holbertonschool/0x18.c/blob/master/101-md5_gm
-export LD_PRELOAD=/tmp/putshack.so
+wget https://github.com/svelezg/holbertonschool-low_level_programming/raw/master/0x18-dynamic_libraries/inject.so -P ../
+export LD_PRELOAD=../inject.so
